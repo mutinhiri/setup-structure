@@ -1,17 +1,6 @@
 import './style.css';
 
-const list = JSON.parse(localStorage.getItem('list')) || [{
-  descreption: 'first',
-  completed: false,
-},
-{
-  descreption: 'second',
-  completed: false,
-},
-{
-  descreption: 'third',
-  completed: false,
-}];
+const list = JSON.parse(localStorage.getItem('list')) 
 const insert = document.getElementById('insert');
 const listItems = document.querySelector('.list-items');
 function ToDo(descreption, completed, index) {
@@ -83,11 +72,10 @@ function pushContent() {
     descreption.className = 'descreption';
     descreption.value = element.descreption;
     const icon1 = document.createElement('button');
-    icon1.innerHTML = '<i class="fas fa-ellipsis-v"></i>';
     icon1.className = 'fas fa-ellipsis-v';
     const icon2 = document.createElement('button');
     icon2.className = 'fa fa-trash';
-    icon2.innerHTML = '<i class="fas fa-trash">u</i>';
+    icon2.textContent = 'u'
     descreForm.appendChild(descreption);
     check.appendChild(input);
     check.appendChild(descreForm);
