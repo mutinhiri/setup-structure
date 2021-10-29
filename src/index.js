@@ -68,7 +68,7 @@ function addToDo() {
 function pushContent() {
   removeChildNodes(listItems);
   insert.value = '';
-  insert.focus();
+  // insert.focus();
   list.forEach((element) => {
     const listItem = document.createElement('li');
     const check = document.createElement('div');
@@ -82,9 +82,9 @@ function pushContent() {
     descreption.type = 'text';
     descreption.className = 'descreption';
     descreption.value = element.descreption;
-    const icon1 = document.createElement('i');
+    const icon1 = document.createElement('button');
     icon1.className = 'fas fa-ellipsis-v';
-    const icon2 = document.createElement('i');
+    const icon2 = document.createElement('button');
     icon2.className = 'fa fa-trash';
     descreForm.appendChild(descreption);
     check.appendChild(input);
