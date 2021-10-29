@@ -1,5 +1,15 @@
 import './style.css';
 
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, far, fab) 
+
+dom.i2svg() 
+
+
 const list = JSON.parse(localStorage.getItem('list')) || [{
   descreption: 'first',
   completed: false,
@@ -83,9 +93,11 @@ function pushContent() {
     descreption.className = 'descreption';
     descreption.value = element.descreption;
     const icon1 = document.createElement('button');
+    icon1.innerHTML = `<i class="fas fa-ellipsis-v"></i>`
     icon1.className = 'fas fa-ellipsis-v';
     const icon2 = document.createElement('button');
     icon2.className = 'fa fa-trash';
+    icon2.innerHTML = `<i class="fas fa-trash">u</i>`
     descreForm.appendChild(descreption);
     check.appendChild(input);
     check.appendChild(descreForm);
