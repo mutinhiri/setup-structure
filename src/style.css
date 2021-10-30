@@ -1,0 +1,103 @@
+body {
+  background-color: #eee;
+}
+
+input {
+  border: none;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li {
+  border-bottom: 3px solid #eee;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 25px;
+  list-style-type: none;
+  height: 3rem;
+}
+
+.insert {
+  width: 100%;
+  height: 100%;
+}
+
+#insert {
+  width: inherit;
+  height: inherit;
+  border: none;
+  outline: none;
+}
+
+.list-items {
+  padding-left: 0;
+}
+
+.check {
+  flex: 3 2;
+  display: flex;
+  align-items: center;
+}
+
+.check .descreption {
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.fa-trash {
+  display: none;
+}
+
+.list-items li:hover .fa-trash {
+  display: block;
+}
+
+.list-items li:hover .fa-ellipsis-v {
+  display: none;
+}
+
+.list-items li:hover {
+  background-color: #eaeb78;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.remove-button {
+  padding-left: 0;
+  padding-right: 0;
+  display: none;
+}
+
+.remove-all {
+  min-width: 100%;
+  height: 3rem;
+  text-align: center;
+  border: none;
+  background-color: #f6f6f6;
+  margin: auto;
+}
+
+.remove-all a {
+  color: black;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.remove-all a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
